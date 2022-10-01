@@ -44,7 +44,18 @@ target("plugin")
     })
 
     add_rules("commonlibsse.plugin.package", {
-        files = {
-            { "@{target_dir}", "*.dll", "Data/SKSE/Plugins/" },
+        packages = {
+            {
+                name = "@{plugin}-@{plugin_ver}.zip",
+                files = {
+                    { "@{target_dir}", "*.dll", "Data/SKSE/Plugins/" },
+                }
+            },
+            {
+                name = "@{plugin}-@{plugin_ver}_pdb.zip",
+                files = {
+                    { "@{target_dir}", "*.pdb" },
+                }
+            }
         }
     })

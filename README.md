@@ -26,7 +26,7 @@ To package the project, run the following command:
 xmake package
 ```
 
-> ***Note:*** *This will generate a `build/package/` directory in the **project's root directory**.*
+> ***Note:*** *This will generate a `build/packages/` directory in the **project's root directory**.*
 
 ### Upgrading
 To upgrade the project's dependencies, run the following command:
