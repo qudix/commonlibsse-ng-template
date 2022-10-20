@@ -3,8 +3,8 @@ set_xmakever("2.7.2")
 -- project
 set_project("template-commonlibsse-ng")
 set_version("0.0.0")
-set_languages("c++20")
 set_license("MIT")
+set_languages("c++20")
 set_optimize("faster")
 set_warnings("allextra", "error")
 
@@ -27,8 +27,10 @@ set_policy("package.requires_lock", true)
 add_requires("fmt", "spdlog")
 add_requires("commonlibsse-ng", { configs = { skyrim_vr = false }})
 
+-- includes
 includes("res/package.lua")
 
+-- targets
 target("template-plugin")
     add_packages("fmt", "spdlog", "commonlibsse-ng")
 
