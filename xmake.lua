@@ -1,9 +1,10 @@
-set_xmakever("2.7.1")
+set_xmakever("2.7.2")
 
 -- project
 set_project("template-commonlibsse-ng")
 set_version("0.0.0")
 set_languages("c++20")
+set_license("MIT")
 set_optimize("faster")
 set_warnings("allextra", "error")
 
@@ -26,36 +27,26 @@ set_policy("package.requires_lock", true)
 add_requires("fmt", "spdlog")
 add_requires("commonlibsse-ng", { configs = { skyrim_vr = false }})
 
-includes("res/commonlib.lua")
+includes("res/package.lua")
 
-target("plugin")
+target("template-plugin")
     add_packages("fmt", "spdlog", "commonlibsse-ng")
 
-    add_rules("commonlibsse.plugin", {
-        name = "template-commonlibsse-ng",
+    add_rules("@commonlibsse-ng/plugin", {
+        name = "template-plugin",
         author = "Qudix",
-        license = "MIT",
-        sources = {
-            files = { "src/plugin/**.cpp" },
-            headers = { "src/plugin/**.h" },
-            include = "src/plugin",
-            pch = "src/plugin/pch.h"
-        }
+        description = "SKSE64 plugin template using CommonLibSSE-NG"
     })
 
-    add_rules("commonlibsse.plugin.package", {
-        packages = {
-            {
-                name = "@{plugin}-@{plugin_ver}.zip",
-                files = {
-                    { "@{target_dir}", "*.dll", "Data/SKSE/Plugins/" },
-                }
-            },
-            {
-                name = "@{plugin}-@{plugin_ver}_pdb.zip",
-                files = {
-                    { "@{target_dir}", "*.pdb" },
-                }
-            }
+    add_files("src/plugin/**.cpp")
+    add_includedirs("src/plugin")
+    set_pcxxheader("src/plugin/pch.h")
+
+    add_rules("mod.package", {
+        ["@{target}-@{target_ver}.zip"] = {
+            { "@{target_dir}", "@{target}.dll", "Data/SKSE/Plugins/" },
+        },
+        ["@{target}-@{target_ver}_pdb.zip"] = {
+            { "@{target_dir}", "@{target}.pdb" },
         }
     })
