@@ -20,7 +20,6 @@ set_defaultmode("releasedbg")
 add_rules("mode.debug", "mode.releasedbg")
 
 -- policies
-set_policy("build.optimization.lto", true)
 set_policy("package.requires_lock", true)
 
 -- packages
