@@ -22,7 +22,7 @@ xmake
 
 ### Packaging
 To package the project, run the following command:
-```
+```bat
 xmake package
 ```
 
@@ -30,6 +30,15 @@ xmake package
 
 ### Upgrading
 To upgrade the project's dependencies, run the following command:
-```
+```bat
 xmake require --upgrade
 ```
+
+## Extra
+### Project Generation
+To generate a Visual Studio Project, run the following command:
+```bat
+xmake project -k vsxmake
+```
+
+> ***Note:*** *This will generate a `vsxmakeXXXX/` directory in the **project's root directory** using the latest version of Visual Studio installed on the system. Any project or file changes will require re-running the above command.*
