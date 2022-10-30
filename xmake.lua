@@ -18,6 +18,7 @@ set_defaultmode("releasedbg")
 
 -- rules
 add_rules("mode.debug", "mode.releasedbg")
+add_rules("plugin.vsxmake.autoupdate")
 
 -- policies
 set_policy("package.requires_lock", true)

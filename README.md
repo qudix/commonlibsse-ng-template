@@ -41,4 +41,4 @@ To generate a Visual Studio Project, run the following command:
 xmake project -k vsxmake
 ```
 
-> ***Note:*** *This will generate a `vsxmakeXXXX/` directory in the **project's root directory** using the latest version of Visual Studio installed on the system. Any project or file changes will require re-running the above command.*
+> ***Note:*** *This will generate a `vsxmakeXXXX/` directory in the **project's root directory** using the latest version of Visual Studio installed on the system.*
