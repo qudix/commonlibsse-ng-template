@@ -34,11 +34,30 @@ To upgrade the project's dependencies, run the following command:
 xmake require --upgrade
 ```
 
-## Extra
 ### Project Generation
 To generate a Visual Studio Project, run the following command:
 ```bat
 xmake project -k vsxmake
 ```
+If that command fails due to an "`unsupported windows/x86`" error, try specifying the correct arch:
+```bat
+xmake project -k vsxmake -a x64
+```
 
 > ***Note:*** *This will generate a `vsxmakeXXXX/` directory in the **project's root directory** using the latest version of Visual Studio installed on the system.*
+
+## Dependency Options
+Some dependencies, like `commonlibsse-ng`, provide options to customize various features:
+
+### `commonlibsse-ng`
+|     Option     |  Type   |              Description             | Default |
+|     :---:      |  :---:  |                 :---:                |  :---:  |
+|   skyrim_se    |  bool   | Enable runtime support for Skyrim SE |  true   |
+|   skyrim_ae    |  bool   | Enable runtime support for Skyrim AE |  true   |
+|   skyrim_vr    |  bool   | Enable runtime support for Skyrim VR |  true   |
+|   skse_xbyak   |  bool   | Enable trampoline support for Xbyak  |  false  |
+
+Example ( `xmake.lua` )
+```lua
+add_requires("commonlibsse-ng", { configs = { skyrim_vr = false, skse_xbyak = true }})
+```
