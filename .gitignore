@@ -5,6 +5,7 @@
 
 # folders
 build/
+vsxmake*/
 
 # files
 *.zip
