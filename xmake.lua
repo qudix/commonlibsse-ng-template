@@ -41,6 +41,7 @@ target("template-plugin")
     })
 
     add_files("src/plugin/**.cpp")
+    add_headerfiles("src/plugin/**.h")
     add_includedirs("src/plugin")
     set_pcxxheader("src/plugin/pch.h")
 
