@@ -48,8 +48,6 @@ target("template-plugin")
     add_rules("mod.package", {
         ["@{target}-@{target_ver}.zip"] = {
             { "@{target_dir}", "@{target}.dll", "Data/SKSE/Plugins/" },
-        },
-        ["@{target}-@{target_ver}_pdb.zip"] = {
-            { "@{target_dir}", "@{target}.pdb" },
+            { "@{target_dir}", "@{target}.pdb", "Data/SKSE/Plugins/" },
         }
     })
