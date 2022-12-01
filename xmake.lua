@@ -9,11 +9,11 @@ set_optimize("faster")
 set_warnings("allextra", "error")
 
 -- allowed
-set_allowedarchs("x64")
+set_allowedarchs("windows|x64")
 set_allowedmodes("debug", "releasedbg")
 
 -- default
-set_defaultarchs("x64")
+set_defaultarchs("windows|x64")
 set_defaultmode("releasedbg")
 
 -- rules

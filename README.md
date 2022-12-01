@@ -39,10 +39,6 @@ To generate a Visual Studio Project, run the following command:
 ```bat
 xmake project -k vsxmake
 ```
-If that command fails due to an "`unsupported windows/x86`" error, try specifying the correct arch:
-```bat
-xmake project -k vsxmake -a x64
-```
 
 > ***Note:*** *This will generate a `vsxmakeXXXX/` directory in the **project's root directory** using the latest version of Visual Studio installed on the system.*
 
