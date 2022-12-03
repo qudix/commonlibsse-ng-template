@@ -42,18 +42,5 @@ xmake project -k vsxmake
 
 > ***Note:*** *This will generate a `vsxmakeXXXX/` directory in the **project's root directory** using the latest version of Visual Studio installed on the system.*
 
-## Dependency Options
-Some dependencies, like `commonlibsse-ng`, provide options to customize various features:
-
-### `commonlibsse-ng`
-|     Option     |  Type   |              Description             | Default |
-|     :---:      |  :---:  |                 :---:                |  :---:  |
-|   skyrim_se    |  bool   | Enable runtime support for Skyrim SE |  true   |
-|   skyrim_ae    |  bool   | Enable runtime support for Skyrim AE |  true   |
-|   skyrim_vr    |  bool   | Enable runtime support for Skyrim VR |  true   |
-|   skse_xbyak   |  bool   | Enable trampoline support for Xbyak  |  false  |
-
-Example ( `xmake.lua` )
-```lua
-add_requires("commonlibsse-ng", { configs = { skyrim_vr = false, skse_xbyak = true }})
-```
+## Documentation
+Please refer to the [Wiki](../../wiki/Home) for more advanced topics.
