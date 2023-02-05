@@ -40,10 +40,10 @@ target("template-plugin")
         description = "SKSE64 plugin template using CommonLibSSE-NG"
     })
 
-    add_files("src/plugin/**.cpp")
-    add_headerfiles("src/plugin/**.h")
-    add_includedirs("src/plugin")
-    set_pcxxheader("src/plugin/pch.h")
+    add_files("src/**.cpp")
+    add_headerfiles("src/**.h")
+    add_includedirs("src")
+    set_pcxxheader("src/pch.h")
 
     add_rules("mod.package", {
         ["@{target}-@{target_ver}.zip"] = {
