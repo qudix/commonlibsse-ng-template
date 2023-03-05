@@ -1,13 +1,11 @@
 rule("mod.package")
     on_package(function(a_target)
         import("core.base.semver")
+        import("core.project.config")
         import("core.project.project")
         import("utils.archive")
 
         local function _parse_str(a_target, a_str)
-            assert(a_target)
-            assert(a_str)
-
             local map = {
                 project =           function() return project.name() or "" end,
                 project_ver =       function() return project.version() or "0.0.0" end,
@@ -20,7 +18,7 @@ rule("mod.package")
                 target_ver_major =  function() return semver.new(map.target_ver()):major() end,
                 target_ver_minor =  function() return semver.new(map.target_ver()):minor() end,
                 target_ver_patch =  function() return semver.new(map.target_ver()):patch() end,
-                target_dir =        function() return path.join(os.projectdir(), a_target:targetdir()) end,
+                target_dir =        function() return path.absolute(a_target:targetdir()) end,
             }
 
             a_str = a_str:gsub("(%@{([^\n]-)})", function(_, a_var)
@@ -38,7 +36,7 @@ rule("mod.package")
             return a_str
         end
 
-        local packages_dir = path.join(os.projectdir(), "$(buildir)", "packages")
+        local packages_dir = path.join(path.absolute(config.buildir()), "packages")
         os.mkdir(packages_dir)
 
         local packages = a_target:extraconf("rules", "mod.package") or {}
@@ -60,14 +58,12 @@ rule("mod.package")
                     os.trycp(src, dest, { rootdir = root })
                 end
 
-                local old_dir = os.cd(package_dir)
-                archive.archive(path.join("../", package_name), ".")
-                os.cd(old_dir)
+                archive.archive(path.join("../", package_name), ".", { curdir = package_dir })
             end
         end
     end)
 
     after_clean(function()
-        local packages_dir = path.join(os.projectdir(), "$(buildir)", "packages")
+        local packages_dir = path.join(path.absolute(config.buildir()), "packages")
         os.tryrm(packages_dir)
     end)
