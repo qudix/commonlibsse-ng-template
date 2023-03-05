@@ -6,7 +6,7 @@
         ["cmake#31fecfc4"] = {
             repo = {
                 branch = "master",
-                commit = "3f772b8dab94b8cd2365c966d2e0e697524ffd89",
+                commit = "9d4c356d01cffde704062af0af5cf1ceb6c1b626",
                 url = "https://gitlab.com/tboox/xmake-repo.git"
             },
             version = "3.24.2"
@@ -14,7 +14,7 @@
         ["commonlibsse-ng#6cab6700"] = {
             repo = {
                 branch = "master",
-                commit = "192395f9c5a9ed24a6739f7291acae159de4d834",
+                commit = "f9e45ebc452bc882cc5614e15d98ccfae19bff24",
                 url = "https://gitlab.com/tboox/xmake-repo.git"
             },
             version = "v3.6.0"
