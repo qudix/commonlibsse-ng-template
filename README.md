@@ -15,7 +15,7 @@ cd template-commonlibsse-ng
 ### Building
 To build the project, run the following command:
 ```bat
-xmake
+xmake build
 ```
 
 > ***Note:*** *This will generate a `build/windows/` directory in the **project's root directory**.*
