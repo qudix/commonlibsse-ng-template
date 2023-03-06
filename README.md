@@ -29,8 +29,9 @@ xmake package
 > ***Note:*** *This will generate a `build/packages/` directory in the **project's root directory**.*
 
 ### Upgrading
-To upgrade the project's dependencies, run the following command:
+To upgrade the project's dependencies, run the following commands:
 ```bat
+xmake repo --update
 xmake require --upgrade
 ```
 
