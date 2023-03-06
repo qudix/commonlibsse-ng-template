@@ -1,6 +1,6 @@
-# CommonLibSSE-NG Template
+# CommonLibSSE-NG Plugin Template
 
-This is a basic plugin template for use with CommonLibSSE-NG.
+This is a basic plugin template using CommonLibSSE-NG.
 
 ### Dependencies
 * [XMake](https://xmake.io) [2.7.4+]
@@ -36,7 +36,7 @@ xmake require --upgrade
 ```
 
 ### Project Generation
-To generate a Visual Studio Project, run the following command:
+To generate a Visual Studio project, run the following command:
 ```bat
 xmake project -k vsxmake
 ```
