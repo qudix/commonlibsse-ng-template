@@ -35,7 +35,7 @@ xmake repo --update
 xmake require --upgrade
 ```
 
-### Project Generation
+### Project Generation (Optional)
 To generate a Visual Studio project, run the following command:
 ```bat
 xmake project -k vsxmake
