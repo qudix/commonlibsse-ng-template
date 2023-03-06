@@ -3,7 +3,7 @@
 This is a basic plugin template for use with CommonLibSSE-NG.
 
 ### Dependencies
-* [XMake](https://xmake.io) [2.7.2+]
+* [XMake](https://xmake.io) [2.7.4+]
 * C++20 Compiler (MSVC, Clang?)
 
 ## Getting started

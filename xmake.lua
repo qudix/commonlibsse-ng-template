@@ -1,4 +1,4 @@
-set_xmakever("2.7.2")
+set_xmakever("2.7.4")
 
 -- project
 set_project("template-commonlibsse-ng")
