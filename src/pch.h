@@ -7,7 +7,7 @@
 #include <spdlog/sinks/msvc_sink.h>
 
 namespace WinAPI = SKSE::WinAPI;
-namespace logger = SKSE::log;
+namespace logs = SKSE::log;
 namespace fs = std::filesystem;
 using namespace std::literals;
 

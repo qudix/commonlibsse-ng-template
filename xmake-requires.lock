@@ -9,7 +9,7 @@
                 commit = "de1e074d91c234091cc2eac6c409f1c8d158ea57",
                 url = "https://gitlab.com/tboox/xmake-repo.git"
             },
-            version = "3.24.2"
+            version = "3.23.2"
         },
         ["commonlibsse-ng#6cab6700"] = {
             repo = {
