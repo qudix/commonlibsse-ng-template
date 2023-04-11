@@ -22,7 +22,6 @@ add_rules("mode.debug", "mode.releasedbg")
 add_rules("plugin.vsxmake.autoupdate")
 
 -- set policies
-set_policy("build.ccache", false)
 set_policy("package.requires_lock", true)
 
 -- require packages
