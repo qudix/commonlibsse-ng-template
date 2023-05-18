@@ -1,5 +1,5 @@
 -- set minimum xmake version
-set_xmakever("2.7.4")
+set_xmakever("2.7.8")
 
 -- set project
 set_project("template-commonlibsse-ng")
