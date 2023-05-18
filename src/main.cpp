@@ -1,3 +1,6 @@
+#include <spdlog/sinks/basic_file_sink.h>
+#include <spdlog/sinks/msvc_sink.h>
+
 void InitLogging()
 {
 	auto path = logs::log_directory();
