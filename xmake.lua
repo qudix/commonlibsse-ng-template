@@ -25,8 +25,6 @@ add_rules("plugin.vsxmake.autoupdate")
 set_policy("package.requires_lock", true)
 
 -- require packages
-add_requires("fmt")
-add_requires("spdlog", { configs = { header_only = false } })
 add_requires("commonlibsse-ng", { configs = { skyrim_vr = false } })
 
 -- targets
