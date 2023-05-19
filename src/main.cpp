@@ -10,13 +10,12 @@ void InitLogging()
 	const auto plugin = SKSE::PluginDeclaration::GetSingleton();
 	*path /= fmt::format("{}.log", plugin->GetName());
 
-	std::shared_ptr<spdlog::sinks::sink> sink;
-	if (WinAPI::IsDebuggerPresent())
-		sink = std::make_shared<spdlog::sinks::msvc_sink_mt>();
-	else
-		sink = std::make_shared<spdlog::sinks::basic_file_sink_mt>(path->string(), true);
+	std::vector<spdlog::sink_ptr> sinks{ 
+		std::make_shared<spdlog::sinks::basic_file_sink_mt>(path->string(), true), 
+		std::make_shared<spdlog::sinks::msvc_sink_mt>() 
+	};
 
-	auto logger = std::make_shared<spdlog::logger>("global", sink);
+	auto logger = std::make_shared<spdlog::logger>("global", sinks.begin(), sinks.end());
 	logger->set_level(spdlog::level::info);
 	logger->flush_on(spdlog::level::info);
 
@@ -30,7 +29,7 @@ void InitMessaging()
 	const auto intfc = SKSE::GetMessagingInterface();
 	if (!intfc->RegisterListener([](SKSE::MessagingInterface::Message* a_msg) {
 		switch(a_msg->type) {
-			// Skyrim lifecycle events.
+			// [Skyrim Lifecycle Events]
 			case SKSE::MessagingInterface::kPostLoad:     // Called after all plugins have finished running SKSEPlugin_Load.
 				// It is now safe to do multithreaded operations, or operations against other plugins.
 				break;
@@ -42,7 +41,7 @@ void InitMessaging()
 				// It is now safe to access form data.
 				RE::ConsoleLog::GetSingleton()->Print("Hello World!");
 				break;
-			// Skyrim game events.
+			// [Skyrim Game Events]
 			case SKSE::MessagingInterface::kNewGame:      // Player starts a new game from main menu.
 				break;
 			case SKSE::MessagingInterface::kPreLoadGame:  // Player selected a game to load, but it hasn't loaded yet.
@@ -80,10 +79,10 @@ void InitSerialization()
 	logs::trace("Initializing cosave serialization...");
 	// Setup serialization if needed
 	// const auto intfc = SKSE::GetSerializationInterface();
-	// intfc->SetUniqueID('0000');    // Unique 4 hex digit ID
-	// intfc->SetSaveCallback(...);   // Function callback when saving the game
-	// intfc->SetRevertCallback(...); // Function callback when reverting state
-	// intfc->SetLoadCallback(...);   // Function callback when loading a save
+	// intfc->SetUniqueID('0000');    // Unique ID
+	// intfc->SetSaveCallback(...);   // Function called when saving the game
+	// intfc->SetRevertCallback(...); // Function called when reverting state
+	// intfc->SetLoadCallback(...);   // Function called when loading a save
 }
 
 SKSEPluginLoad(const SKSE::LoadInterface* a_skse)
