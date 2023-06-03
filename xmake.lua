@@ -45,7 +45,7 @@ target("template-plugin")
     add_includedirs("src")
     set_pcxxheader("src/pch.h")
 
-    -- copy build files to MODS or SKYRIM paths
+    -- copy build files to MODS or SKYRIM paths (remove if not needed)
     after_build(function(target)
         local copy = function(env, ext)
             for _, env in pairs(env:split(";")) do
