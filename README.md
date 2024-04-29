@@ -3,12 +3,12 @@
 This is a basic plugin template using CommonLibSSE-NG.
 
 ### Requirements
-* [XMake](https://xmake.io) [2.7.8+]
+* [XMake](https://xmake.io) [2.8.2+]
 * C++23 Compiler (MSVC, Clang?)
 
 ## Getting Started
 ```bat
-git clone https://github.com/Qudix/template-commonlibsse-ng
+git clone https://github.com/qudix/template-commonlibsse-ng
 cd template-commonlibsse-ng
 ```
 
@@ -23,9 +23,9 @@ xmake build
 ### Build Output (Optional)
 If you want to redirect the build output, set one of or both of the following environment variables:
 
-- Path(s) to a Skyrim install folder: `SKYRIM_PATH`
+- Path(s) to a Skyrim install folder: `XSE_TES5_GAME_PATH`
 
-- Path(s) to a Mod Manager mods folder: `SKYRIM_MODS_PATH`
+- Path(s) to a Mod Manager mods folder: `XSE_TES5_MODS_PATH`
 
 > ***Note:*** *Both variables support semicolon (`;`) seperated paths for multiple game installs or `mods` folders.*
 
