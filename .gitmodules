@@ -1,0 +1,3 @@
+[submodule "lib/commonlibsse-ng"]
+	path = lib/commonlibsse-ng
+	url = https://github.com/CharmedBaryon/CommonLibSSE-NG.git

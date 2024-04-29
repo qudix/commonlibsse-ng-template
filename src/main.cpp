@@ -8,7 +8,7 @@ void InitLogging()
 		return;
 
 	const auto plugin = SKSE::PluginDeclaration::GetSingleton();
-	*path /= fmt::format("{}.log", plugin->GetName());
+	*path /= std::format("{}.log", plugin->GetName());
 
 	std::vector<spdlog::sink_ptr> sinks{ 
 		std::make_shared<spdlog::sinks::basic_file_sink_mt>(path->string(), true), 

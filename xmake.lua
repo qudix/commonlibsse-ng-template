@@ -1,20 +1,18 @@
 -- set minimum xmake version
 set_xmakever("2.7.8")
 
+-- includes
+includes("lib/commonlibsse-ng")
+
 -- set project
-set_project("template-commonlibsse-ng")
+set_project("commonlibsse-ng-template")
 set_version("0.0.0")
 set_license("MIT")
-set_languages("c++20")
-set_optimize("faster")
-set_warnings("allextra", "error")
-
--- set allowed
-set_allowedarchs("windows|x64")
-set_allowedmodes("debug", "releasedbg")
 
 -- set defaults
-set_defaultarchs("windows|x64")
+set_languages("c++23")
+set_optimize("faster")
+set_warnings("allextra", "error")
 set_defaultmode("releasedbg")
 
 -- add rules
@@ -24,17 +22,16 @@ add_rules("plugin.vsxmake.autoupdate")
 -- set policies
 set_policy("package.requires_lock", true)
 
--- require packages
-add_requires("commonlibsse-ng", { configs = { skyrim_vr = false } })
+-- set configs
+set_config("skyrim_vr", false)
 
 -- targets
-target("template-plugin")
-    -- add packages to target
-    add_packages("fmt", "spdlog", "commonlibsse-ng")
+target("commonlibsse-ng-template")
+    add_deps("commonlibsse-ng")
 
     -- add commonlibsse-ng plugin
-    add_rules("@commonlibsse-ng/plugin", {
-        name = "template-plugin",
+    add_rules("commonlibsse-ng.plugin", {
+        name = "commonlibsse-ng-template",
         author = "Qudix",
         description = "SKSE64 plugin template using CommonLibSSE-NG"
     })
