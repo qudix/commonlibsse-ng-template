@@ -11,7 +11,7 @@
             },
             version = "3.29.3"
         },
-        ["directxmath#9c36f0a9"] = {
+        ["directxmath#31fecfc4"] = {
             repo = {
                 branch = "master",
                 commit = "0a03ba929e549ea94ca20e7579f288fc0b0d801a",
@@ -19,7 +19,7 @@
             },
             version = "2024.02"
         },
-        ["directxtk#9c36f0a9"] = {
+        ["directxtk#31fecfc4"] = {
             repo = {
                 branch = "master",
                 commit = "0a03ba929e549ea94ca20e7579f288fc0b0d801a",
