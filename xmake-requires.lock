@@ -9,7 +9,23 @@
                 commit = "d885463d7cea3253b436ded2f4f17fd8423c4eaa",
                 url = "https://github.com/xmake-io/xmake-repo.git"
             },
-            version = "3.29.0-rc2"
+            version = "3.29.3"
+        },
+        ["directxmath#9c36f0a9"] = {
+            repo = {
+                branch = "master",
+                commit = "0a03ba929e549ea94ca20e7579f288fc0b0d801a",
+                url = "https://gitlab.com/tboox/xmake-repo.git"
+            },
+            version = "2024.02"
+        },
+        ["directxtk#9c36f0a9"] = {
+            repo = {
+                branch = "master",
+                commit = "0a03ba929e549ea94ca20e7579f288fc0b0d801a",
+                url = "https://gitlab.com/tboox/xmake-repo.git"
+            },
+            version = "24.2.0"
         },
         ["spdlog#9c36f0a9"] = {
             repo = {
