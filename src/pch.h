@@ -4,5 +4,4 @@
 #include <SKSE/SKSE.h>
 
 namespace logs = SKSE::log;
-namespace stl = SKSE::stl;
 using namespace std::literals;
