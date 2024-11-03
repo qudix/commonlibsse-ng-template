@@ -9,7 +9,7 @@
                 commit = "d885463d7cea3253b436ded2f4f17fd8423c4eaa",
                 url = "https://github.com/xmake-io/xmake-repo.git"
             },
-            version = "3.29.3"
+            version = "3.30.5"
         },
         ["directxmath#31fecfc4"] = {
             repo = {
