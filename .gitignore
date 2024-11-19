@@ -1,4 +1,6 @@
 # dot folders
+.cache
+.idea
 .vs/
 .vscode/
 .xmake/
@@ -9,3 +11,4 @@ vs*/
 
 # files
 *.zip
+compile_commands.json
