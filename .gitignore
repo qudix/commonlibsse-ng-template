@@ -1,6 +1,6 @@
 # dot folders
-.cache
-.idea
+.cache/
+.idea/
 .vs/
 .vscode/
 .xmake/
