@@ -4,7 +4,7 @@ This is a basic plugin template using CommonLibSSE-NG.
 
 ### Requirements
 * [XMake](https://xmake.io) [2.8.2+]
-* C++23 Compiler (MSVC, Clang?)
+* C++23 Compiler (MSVC, Clang-CL)
 
 ## Getting Started
 ```bat
