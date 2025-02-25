@@ -14,7 +14,7 @@
         ["directxmath#31fecfc4"] = {
             repo = {
                 branch = "master",
-                commit = "0a03ba929e549ea94ca20e7579f288fc0b0d801a",
+                commit = "1c4a5226d098031c7980196c162975781e1627cd",
                 url = "https://gitlab.com/tboox/xmake-repo.git"
             },
             version = "2024.02"
@@ -22,7 +22,7 @@
         ["directxtk#31fecfc4"] = {
             repo = {
                 branch = "master",
-                commit = "0a03ba929e549ea94ca20e7579f288fc0b0d801a",
+                commit = "1c4a5226d098031c7980196c162975781e1627cd",
                 url = "https://gitlab.com/tboox/xmake-repo.git"
             },
             version = "24.2.0"
