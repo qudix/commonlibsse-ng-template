@@ -6,8 +6,8 @@
         ["cmake#31fecfc4"] = {
             repo = {
                 branch = "master",
-                commit = "d885463d7cea3253b436ded2f4f17fd8423c4eaa",
-                url = "https://github.com/xmake-io/xmake-repo.git"
+                commit = "da016bf271a4a37cd9e89cf772b0d3d730767843",
+                url = "https://gitlab.com/tboox/xmake-repo.git"
             },
             version = "3.30.5"
         },
@@ -30,10 +30,10 @@
         ["spdlog#9c36f0a9"] = {
             repo = {
                 branch = "master",
-                commit = "d885463d7cea3253b436ded2f4f17fd8423c4eaa",
-                url = "https://github.com/xmake-io/xmake-repo.git"
+                commit = "da016bf271a4a37cd9e89cf772b0d3d730767843",
+                url = "https://gitlab.com/tboox/xmake-repo.git"
             },
-            version = "v1.13.0"
+            version = "v1.15.2"
         }
     }
 }
