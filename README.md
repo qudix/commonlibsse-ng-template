@@ -8,7 +8,7 @@ This is a basic plugin template using CommonLibSSE-NG.
 
 ## Getting Started
 ```bat
-git clone --recurse-submodules https://github.com/qudix/commonlibsse-ng-template
+git clone --recurse-submodules https://github.com/libxse/commonlibsse-ng-template
 cd commonlibsse-ng-template
 ```
 
